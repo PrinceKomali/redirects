@@ -1,1 +1,39 @@
-hi
+<!DOCTYPE html>
+<head>
+    <meta property="og:title" content="Komali's URL Forwarder" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://koma.li" />
+    <meta property="og:image" content="https://komali.dev/stella_lurk.png" />
+    <meta property="og:description" content="Click this link to go somewhere!" />
+    <meta name="theme-color" content="#1A7CE2">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://komali.dev/main.css">
+    <style>#main{
+        margin-top: 10%;
+    }</style>
+</head>
+<body>
+    <div id="main">
+    <div id="inner">
+        <h1 id=w>Not sure how you got here...</h1>
+    </div>
+</div>
+    <script>
+        let links = {
+            "#": "https://komali.dev",
+            "#t": "https://twitch.tv/komali09",
+            "#b": "https://twitch.tv/botwcollective",
+            "#y": "https://youtube.com/c/KomaliPrinceOfRito",
+            "#d": "https://discord.gg/QWCcXMe",
+            "#p": "https://periwinke.sh",
+            "#u": "https://underscore.wtf"
+        }
+        let hash = window.location.toString().split(window.location.pathname).pop();
+        if(links[hash]) window.location.href = links[hash];
+        else {
+            if(hash == '') w.innerText = "Not really anything here..."
+            else w.innerText = hash +  " not found! Try another hash..."
+        }
+    </script>
+</body>
