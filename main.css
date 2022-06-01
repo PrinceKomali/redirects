@@ -1,5 +1,9 @@
+:root {
+  --color-background: #1a7ce2;
+}
+
 button {
-  border-color: #1a7ce2;
+  border-color: var(--color-background);
   background-color: #eeefff;
   font-family: 'Monospace','sans-serif';
   font-style: italic;
@@ -21,7 +25,7 @@ button {
 }
 
 a:-webkit-any-link {
-  color: #1a7ce2;
+  color: var(--color-background);
 }
 
 hr {
@@ -122,7 +126,6 @@ body {
 .widget > img {
   height: 70%;
   vertical-align: -.21em;
-  
 }
 
 .crop {
@@ -153,5 +156,4 @@ body {
   100% {
       opacity: 100%;
   }
-  
 }
