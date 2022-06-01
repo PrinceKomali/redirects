@@ -27,9 +27,12 @@
 <body>
     <div id="main">
         <div id="inner">
-            <h1 id=w></h1>
+            <div id="content">
+                <h1 id=w></h1>
+                
+            </div>
             <div id="links">
-
+                
             </div>
         </div>
     </div>
@@ -48,12 +51,19 @@
         let hash = window.location.toString().split(window.location.pathname).pop();
         if (links[hash]) window.location.href = links[hash];
         else {
-            if (hash == '') w.innerText = "Not really anything here..."
+            if (hash == '') {
+                w.innerText = "Your link is in another castle!"
+                document.querySelector("#content").innerHTML += `
+                    <p>Try one of these instead:</p>
+                
+                `
+            }
             else w.innerText = hash + " not found! Try another url..."
         }
         window.onload = _ => {
             for(i of Object.keys(links)) {
-                document.querySelector("#links").innerHTML += `<br><a href='https://koma.li/${i}'><span style='color:#1a7ce2'>koma.li/<span style='color:#26c983'>${i}</span></span></a> ${'&nbsp'.repeat(5-i.length)}-> &nbsp;&nbsp<a href='${links[i]}'>${links[i].split("://")[1]}</a>`
+                document.querySelector("#links").innerHTML += `
+                <a href='https://koma.li/${i}'><span style='color:#1a7ce2'>koma.li/<span style='color:#26c983'>${i}</span></span></a> ${'&nbsp'.repeat(5-i.length)}-> &nbsp;&nbsp<a href='${links[i]}'>${links[i].split("://")[1]}</a><br>`
             }
         }
     </script>
