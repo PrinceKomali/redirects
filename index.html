@@ -54,8 +54,11 @@
             if (hash == '') {
                 w.innerText = "Your link is in another castle!"
                 document.querySelector("#content").innerHTML += `
-                    <p>Try one of these instead:</p>
-                
+                <!--
+                    <p style='margin-bottom:5px'>Here's a cat instead</p>
+                    <p style='font-style:italic'>picture of cat</p>
+                -->
+                    <p style='margin-bottom:5px'>Try one of these instead:</p>
                 `
             }
             else w.innerText = hash + " not found! Try another url..."
