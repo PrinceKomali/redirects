@@ -1,9 +1,9 @@
 :root {
-  --color-background: #1a7ce2;
+  --color-blue: #1a7ce2;
 }
 
 button {
-  border-color: var(--color-background);
+  border-color: var(--color-blue);
   background-color: #eeefff;
   font-family: 'Monospace','sans-serif';
   font-style: italic;
@@ -25,7 +25,7 @@ button {
 }
 
 a:-webkit-any-link {
-  color: var(--color-background);
+  color: var(--color-blue);
 }
 
 hr {
@@ -56,7 +56,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 55rem 1fr;
   grid-template-rows: 0rem auto;
-  min-height: 100%;
+  min-height: 100vh;
 }
 
 #main {
@@ -83,7 +83,7 @@ body {
   border-color: white;
   border-width: 0 .2rem .2rem .2rem;
 
-  line-height: 28px;
+  line-height: 1.75em;
 
   position: relative;
   z-index: 6;
@@ -119,8 +119,6 @@ body {
   margin-left: 20px;
   padding-left: 10px;
   vertical-align: middle;
-
-
 }
 
 .widget > img {
