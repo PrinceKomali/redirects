@@ -19,10 +19,8 @@
         <div id="inner">
             <div id="content">
                 <h1 id=w></h1>
-                
             </div>
             <div id="links">
-                
             </div>
         </div>
     </div>
@@ -56,7 +54,7 @@
         window.onload = _ => {
             for(i of Object.keys(links)) {
                 document.querySelector("#links").innerHTML += `
-                <a href='https://koma.li/${i}'>koma.li/<span class="green">${i}</span></a>${'&nbsp'.repeat(6-i.length)}<wbr>->&nbsp;&nbsp;<a href="${links[i]}">${links[i].split("://")[1]}</a><br>`
+                <a href='https://koma.li/${i}'>koma.li/<span class="green">${i}</span></a>${'&nbsp'.repeat(6-i.length)}<br class="no_break">->&nbsp;&nbsp;<a href="${links[i]}">${links[i].split("://")[1]}</a><br class="no_break"><br>`
             }
         }
     </script>

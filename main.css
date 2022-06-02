@@ -15,6 +15,11 @@
   }
 }
 
+@media screen and (min-width: 520px) {
+  .no_break {
+    display: none;
+  }
+}
 .green {color: var(--color-green)}
 
 @font-face {font-family: 'Ubuntu Mono'; src: url(https://koma.li/UbuntuMono-Bold.ttf)}
