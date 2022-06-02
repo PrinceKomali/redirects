@@ -45,10 +45,10 @@
                 w.innerText = "Your link is in another castle!"
                 document.querySelector("#content").innerHTML += `
                 <!--
-                    <p style='margin-bottom:5px'>Here's a cat instead</p>
+                    <p style='margin-bottom:5px'>Here's a cat for now</p>
                     <p style='font-style:italic'>picture of cat</p>
                 -->
-                <p style='margin-bottom:5px'>Try one of these instead:</p>
+                <p style='margin-bottom:5px'>Maybe try one of these:</p>
                 `
             }
             else w.innerText = hash + " not found! Try another url..."
@@ -56,7 +56,7 @@
         window.onload = _ => {
             for(i of Object.keys(links)) {
                 document.querySelector("#links").innerHTML += `
-                <a href='https://koma.li/${i}'><span style='color:#1a7ce2'>koma.li/<span style='color:#26c983'>${i}</span></span></a> ${'&nbsp'.repeat(5-i.length)}-> &nbsp;&nbsp<a href='${links[i]}'>${links[i].split("://")[1]}</a><br>`
+                <a href='https://koma.li/${i}'>koma.li/<span class="green">${i}</span></a>${'&nbsp'.repeat(6-i.length)}<wbr>->&nbsp;&nbsp;<a href="${links[i]}">${links[i].split("://")[1]}</a><br>`
             }
         }
     </script>

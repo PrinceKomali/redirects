@@ -1,4 +1,5 @@
 :root {
+  --color-green: #26c983;
   --color-blue: #1a7ce2;
   --color-bg: #ffffff;
   --color-text: #000000;
@@ -14,10 +15,14 @@
   }
 }
 
+.green {color: var(--color-green)}
+
 @font-face {font-family: 'Ubuntu Mono'; src: url(https://koma.li/UbuntuMono-Bold.ttf)}
 #links {
-    font-family: 'Ubuntu Mono', monospace;
-    font-weight: bold;
+  font-family: 'Ubuntu Mono', monospace;
+  font-weight: bold;
+  list-style: none;
+  padding-left: 0;
 }
 
 button {
