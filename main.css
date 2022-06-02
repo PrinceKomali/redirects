@@ -14,6 +14,12 @@
   }
 }
 
+@font-face {font-family: 'Ubuntu Mono'; src: url(https://koma.li/UbuntuMono-Bold.ttf)}
+#links {
+    font-family: 'Ubuntu Mono', monospace;
+    font-weight: bold;
+}
+
 button {
   border-color: var(--color-blue);
   background-color: #eeefff;
