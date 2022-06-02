@@ -57,8 +57,7 @@ a {
 }
 
 hr {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin: 30px 0;
 }
 
 .background {
@@ -73,8 +72,8 @@ hr {
 
 @font-face {font-family: Calamity;src: url(https://komali.dev/CALAMITY-BOLD.TTF);}
 .big1 {
-font-size: 60px;
-margin-top: 50px;  
+  font-size: 60px;
+  margin-top: 50px;  
 }
 
 body {
@@ -90,13 +89,13 @@ body {
 
   border-radius: .5rem;
 
-  margin: 10em auto;
+  margin: 5em auto;
   max-width: min(55rem, calc(100vw - 3rem));
 }
 
 #inner {
   width: 100%;
-  margin: 0 0 0 0;
+  margin: 0;
   padding: 10px;
   background-color: var(--color-bg);
   color: var(--color-text);
@@ -105,7 +104,7 @@ body {
   box-sizing: border-box;
   border-style: solid;
   border-color: var(--color-shadow);
-  border-width: 0 .2rem .2rem .2rem;
+  border-width: 0 .2rem .2rem;
 
   line-height: 1.75em;
 
@@ -123,6 +122,7 @@ body {
   vertical-align: middle;
   display: inline-block;
 }
+
 .icon {
   height: 35px;
   padding: 5px;
@@ -139,9 +139,8 @@ body {
   align-items: center;
   position: inherit;
   height: 1.8rem;
-  padding-right: 10px;
+  padding: 0 10px;
   margin-left: 20px;
-  padding-left: 10px;
   vertical-align: middle;
 }
 
