@@ -22,6 +22,8 @@
 }
 .green {color: var(--color-green)}
 
+.crop {border-radius: 50%}
+
 @font-face {font-family: 'Ubuntu Mono'; src: url(https://koma.li/UbuntuMono-Bold.ttf)}
 #links {
   font-family: 'Ubuntu Mono', monospace;
@@ -128,10 +130,6 @@ body {
   padding: 5px;
 }
 
-.icon:hover, a:hover, button:hover {
-  animation: flash 2s linear infinite;
-}
-
 .widget {
   background-color: rgba(0,0,0,.3);
   border-radius: 10px;
@@ -149,8 +147,8 @@ body {
   vertical-align: -.21em;
 }
 
-.crop {
-  border-radius: 100%;
+.icon:hover, a:hover, button:hover {
+  animation: flash 2s linear infinite;
 }
 
 .fadein {
@@ -170,6 +168,7 @@ body {
       filter: hue-rotate(360deg);
   }
 }
+
 @keyframes fadein {
   0% {
       opacity: 0%;
