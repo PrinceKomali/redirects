@@ -1,3 +1,5 @@
+@font-face {font-family: 'Ubuntu Mono'; src: url(https://koma.li/UbuntuMono-Bold.ttf)}
+
 :root {
   --top-padding: 5em;
 
@@ -41,17 +43,6 @@
   }
 }
 
-@font-face {font-family: 'Ubuntu Mono'; src: url(https://koma.li/UbuntuMono-Bold.ttf)}
-#links {
-  font-family: 'Ubuntu Mono', monospace;
-  font-weight: bold;
-}
-
-.green {
-  color: var(--color-green);
-  text-decoration: underline;
-}
-
 body {
   background-color: var(--color-body-bg);
   font-family: 'Calamity','sans-serif';
@@ -60,11 +51,23 @@ body {
 }
 
 a {
+  font-family: 'Ubuntu Mono', monospace;
   color: var(--color-blue);
+  font-weight: bold;
 }
 
 a:hover {
   animation: flash 2s linear infinite;
+}
+
+.green {
+  color: var(--color-green);
+  text-decoration: underline;
+}
+
+.plug {
+  float: right;
+  margin: 0.6em;
 }
 
 #main {
@@ -78,7 +81,7 @@ a:hover {
 #inner {
   width: 100%;
   margin: 0;
-  padding: 10px;
+  padding: 15px;
   background-color: var(--color-inner-bg);
   color: var(--color-heading);
   border-radius: 10px;
