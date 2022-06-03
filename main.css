@@ -45,7 +45,7 @@
 
 .green {
   color: var(--color-green);
-  /*text-decoration: underline;*/
+  text-decoration: underline;
 }
 
 body {
