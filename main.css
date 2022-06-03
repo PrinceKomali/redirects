@@ -15,12 +15,25 @@
   }
 }
 
+@keyframes flash {
+  0% {
+      filter: hue-rotate(0deg);
+  }
+
+  50% {
+      filter: hue-rotate(180deg);
+  }
+
+  100% {
+      filter: hue-rotate(360deg);
+  }
+}
+
 @media screen and (min-width: 520px) {
   .no_break {
     display: none;
   }
 }
-.green {color: var(--color-green)}
 
 @font-face {font-family: 'Ubuntu Mono'; src: url(https://koma.li/UbuntuMono-Bold.ttf)}
 #links {
@@ -28,15 +41,9 @@
   font-weight: bold;
 }
 
-#txt {
-  font-size: 10px;
-  visibility: hidden;
-  display: block;
-  color: #fff;
-}
-
-a {
-  color: var(--color-blue);
+.green {
+  color: var(--color-green);
+  /*text-decoration: underline;*/
 }
 
 body {
@@ -44,6 +51,14 @@ body {
   font-family: 'Calamity','sans-serif';
   margin: 0;
   min-height: 100vh;
+}
+
+a {
+  color: var(--color-blue);
+}
+
+a:hover {
+  animation: flash 2s linear infinite;
 }
 
 #main {
@@ -71,22 +86,4 @@ body {
   height: auto;
   overflow: hidden;
   background-origin: border-box;
-}
-
-a:hover, button:hover {
-  animation: flash 2s linear infinite;
-}
-
-@keyframes flash {
-  0% {
-      filter: hue-rotate(0deg);
-  }
-
-  50% {
-      filter: hue-rotate(180deg);
-  }
-
-  100% {
-      filter: hue-rotate(360deg);
-  }
 }
