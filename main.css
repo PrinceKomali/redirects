@@ -3,8 +3,9 @@
   --color-blue: #1a7ce2;
   --color-inner-bg: #ffffff;
   --color-body-bg: #000050;
-  --color-text: #000000;
-  --color-shadow: #ffffff;
+  --color-heading: #000;
+  --color-text: #222;
+  --color-shadow: #FFF;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -12,7 +13,8 @@
     --color-blue: #3088e6;
     --color-inner-bg: #181A1B;
     --color-body-bg: #000033;
-    --color-text: #FFFFFF;
+    --color-heading: #FFF;
+    --color-text: #DDD;
     --color-shadow: #303436;
   }
 }
@@ -76,16 +78,24 @@ a:hover {
   margin: 0;
   padding: 10px;
   background-color: var(--color-inner-bg);
-  color: var(--color-text);
+  color: var(--color-heading);
   border-radius: 10px;
   box-sizing: border-box;
-  border-style: solid;
-  border-color: var(--color-shadow);
-  border-width: 0 .2rem .2rem;
+  border: solid var(--color-shadow);
+  border-width: 0 3px 3px;
   line-height: 1.75em;
   position: relative;
   z-index: 6;
   height: auto;
   overflow: hidden;
   background-origin: border-box;
+}
+
+#content p {
+  margin-bottom: 5px;
+  color: var(--color-text);
+}
+
+#content img {
+  max-width: 10em;
 }
