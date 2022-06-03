@@ -22,19 +22,9 @@
 }
 .green {color: var(--color-green)}
 
-.crop {border-radius: 50%}
-
 @font-face {font-family: 'Ubuntu Mono'; src: url(https://koma.li/UbuntuMono-Bold.ttf)}
 #links {
   font-family: 'Ubuntu Mono', monospace;
-  font-weight: bold;
-}
-
-button {
-  border-color: var(--color-blue);
-  background-color: #eeefff;
-  font-family: 'Monospace','sans-serif';
-  font-style: italic;
   font-weight: bold;
 }
 
@@ -45,35 +35,8 @@ button {
   color: #fff;
 }
 
-.stella {
-  /* The most important part */
-  position: fixed;
-  bottom: 0;
-  right: 10px;
-}
-
 a {
   color: var(--color-blue);
-}
-
-hr {
-  margin: 30px 0;
-}
-
-.background {
-  filter: sepia(100%) saturate(300%) brightness(50%) hue-rotate(198deg);
-  min-height: 100%;
-  min-width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-@font-face {font-family: Calamity;src: url(https://komali.dev/CALAMITY-BOLD.TTF);}
-.big1 {
-  font-size: 60px;
-  margin-top: 50px;  
 }
 
 body {
@@ -86,9 +49,7 @@ body {
 #main {
   box-sizing: border-box;
   display: block;
-
   border-radius: .5rem;
-
   margin: 5em auto;
   max-width: min(55rem, calc(100vw - 3rem));
 }
@@ -100,57 +61,20 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
   border-radius: 10px;
-
   box-sizing: border-box;
   border-style: solid;
   border-color: var(--color-shadow);
   border-width: 0 .2rem .2rem;
-
   line-height: 1.75em;
-
   position: relative;
   z-index: 6;
-
   height: auto;
   overflow: hidden;
   background-origin: border-box;
 }
 
-#flag {
-  height: 1rem;
-  border-radius: 4px;
-  vertical-align: middle;
-  display: inline-block;
-}
-
-.icon {
-  height: 35px;
-  padding: 5px;
-}
-
-.widget {
-  background-color: rgba(0,0,0,.3);
-  border-radius: 10px;
-  display: inline-block;
-  align-items: center;
-  position: inherit;
-  height: 1.8rem;
-  padding: 0 10px;
-  margin-left: 20px;
-  vertical-align: middle;
-}
-
-.widget > img {
-  height: 70%;
-  vertical-align: -.21em;
-}
-
-.icon:hover, a:hover, button:hover {
+a:hover, button:hover {
   animation: flash 2s linear infinite;
-}
-
-.fadein {
-  animation: normal fadein 1s linear;
 }
 
 @keyframes flash {
@@ -164,14 +88,5 @@ body {
 
   100% {
       filter: hue-rotate(360deg);
-  }
-}
-
-@keyframes fadein {
-  0% {
-      opacity: 0%;
-  }
-  100% {
-      opacity: 100%;
   }
 }
