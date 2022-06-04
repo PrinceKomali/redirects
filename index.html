@@ -15,14 +15,15 @@
 </head>
 
 <body>
-    <div id="main">
-        <div id="inner">
+    <div class="main">
+        <div class="inner">
             <a href="https://github.com/SurprisedPikaa/" class="plug">CSS By Pika</a>
-            <div id="content">
-                <h1 id=w></h1>
+            <div class="content">
+                <h1 class='w'></h1>
             </div>
-            <div id="links">
-            </div>
+            <ul class="links">
+
+            </ul>
         </div>
     </div>
     <script>
@@ -41,8 +42,8 @@
         if (links[hash]) window.location.href = links[hash];
         else {
             if (hash == '') {
-                w.innerText = "Your link is in another castle!"
-                document.querySelector("#content").innerHTML += `
+                document.querySelector(".w").innerText = "Your link is in another castle!"
+                document.querySelector(".content").innerHTML += `
                 <p>Here's a cat instead</p>
                 <img src="cat.webp" alt="a cat">
                 <p>Maybe try one of these:</p>
@@ -52,8 +53,8 @@
         }
         window.onload = _ => {
             for(i of Object.keys(links)) {
-                document.querySelector("#links").innerHTML += `
-                <a href='https://koma.li/${i}'>koma.li<span class="green">/${i}</span></a>${'&nbsp'.repeat(6-i.length)}<br class="no_break">->&nbsp;&nbsp;<a href="${links[i]}">${links[i].split("://")[1]}</a><br class="no_break"><br>`
+                document.querySelector(".links").innerHTML += `
+                <li><a href='https://koma.li/${i}'>koma.li<span class="green">/${i}</span></a><br class="no_break">${'&nbsp'.repeat(6-i.length)}->&nbsp;&nbsp;<a href="${links[i]}">${links[i].split("://")[1]}</a><br class="no_break"><br></li>`
             }
         }
     </script>
