@@ -18,12 +18,8 @@
     <div class="main">
         <div class="inner">
             <a href="https://github.com/SurprisedPikaa/" class="plug">CSS By Pika</a>
-            <div class="content">
-                <h1 class='w'></h1>
-            </div>
-            <ul class="links">
-
-            </ul>
+            <div class="content"></div>
+            <ul class="links"></ul>
         </div>
     </div>
     <script>
@@ -42,14 +38,14 @@
         if (links[hash]) window.location.href = links[hash];
         else {
             if (hash == '') {
-                document.querySelector(".w").innerText = "Your link is in another castle!"
                 document.querySelector(".content").innerHTML += `
+                <h1>Your link is in another castle!</h1>
                 <p>Here's a cat instead</p>
                 <img src="cat.webp" alt="a cat">
                 <p>Maybe try one of these:</p>
                 `
             }
-            else w.innerText = hash + " not found! Try another url..."
+            else document.querySelector(".content").innerHTML += "<h1>" + hash + " not found! Try another url..." + "</h1>"
         }
         window.onload = _ => {
             for(i of Object.keys(links)) {
