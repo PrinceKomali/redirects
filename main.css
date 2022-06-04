@@ -1,4 +1,4 @@
-@font-face {font-family: 'Ubuntu Mono'; src: url(https://koma.li/UbuntuMono-Bold.ttf)}
+@font-face {font-family: 'Ubuntu Mono'; src: url(UbuntuMono-Bold.ttf)}
 
 :root {
   --top-padding: 5em;
@@ -50,9 +50,7 @@ body {
   min-height: calc(100vh - var(--top-padding));
 }
 
-a {
-  font-family: 'Ubuntu Mono', monospace;
-  color: var(--color-blue);
+a {color: var(--color-blue);
   font-weight: bold;
 }
 
@@ -70,7 +68,7 @@ a:hover {
   margin: 0.6em;
 }
 
-#main {
+.main {
   box-sizing: border-box;
   display: block;
   border-radius: .5rem;
@@ -78,7 +76,7 @@ a:hover {
   max-width: min(55rem, calc(100vw - 3rem));
 }
 
-#inner {
+.inner {
   width: 100%;
   margin: 0;
   padding: 15px;
@@ -96,11 +94,18 @@ a:hover {
   background-origin: border-box;
 }
 
-#content p {
+.content p {
   margin-bottom: 5px;
   color: var(--color-text);
 }
 
-#content img {
+.content img {
   max-width: 10em;
+}
+
+
+ul {
+  font-family: 'Ubuntu Mono', monospace;
+  list-style-type: none;
+  padding-left: 0;
 }
