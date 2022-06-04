@@ -1,8 +1,7 @@
 @font-face {font-family: 'Ubuntu Mono'; src: url(UbuntuMono-Bold.ttf)}
 
 :root {
-  --top-padding: 5em;
-
+  --top-padding: clamp(2.5rem, 7vw, 5rem);
   --color-green: #26c983;
   --color-blue: #1a7ce2;
   --color-inner-bg: #ffffff;
@@ -24,23 +23,9 @@
 }
 
 @keyframes flash {
-  0% {
-      filter: hue-rotate(0deg);
-  }
-
-  50% {
-      filter: hue-rotate(180deg);
-  }
-
-  100% {
-      filter: hue-rotate(360deg);
-  }
-}
-
-@media screen and (min-width: 520px) {
-  .no_break {
-    display: none;
-  }
+  0% {filter: hue-rotate(0deg)}
+  50% {filter: hue-rotate(180deg)}
+  100% {filter: hue-rotate(360deg)}
 }
 
 body {
@@ -50,8 +35,8 @@ body {
   min-height: calc(100vh - var(--top-padding));
 }
 
-a {color: var(--color-blue);
-  font-weight: bold;
+a {
+  color: var(--color-blue);
 }
 
 a:hover {
@@ -63,35 +48,21 @@ a:hover {
   text-decoration: underline;
 }
 
-.plug {
-  float: right;
-  margin: 0.6em;
-}
-
-.main {
-  box-sizing: border-box;
-  display: block;
-  border-radius: .5rem;
-  margin: var(--top-padding) auto;
-  max-width: min(55rem, calc(100vw - 3rem));
-}
-
 .inner {
-  width: 100%;
-  margin: 0;
+  max-width: min(55rem, calc(100vw - 5rem));
+  margin: var(--top-padding) auto;
   padding: 15px;
   background-color: var(--color-inner-bg);
   color: var(--color-heading);
-  border-radius: 10px;
-  box-sizing: border-box;
+  border-radius: 0.5em;
   border: solid var(--color-shadow);
   border-width: 0 3px 3px;
-  line-height: 1.75em;
-  position: relative;
-  z-index: 6;
-  height: auto;
-  overflow: hidden;
-  background-origin: border-box;
+}
+
+.plug {
+  float: right;
+  margin: 0.6em;
+  font-size: clamp(0.8rem, 2vw, 1rem);
 }
 
 .content p {
@@ -103,6 +74,10 @@ a:hover {
   max-width: 10em;
 }
 
+.links {
+  font-size: clamp(0.8rem, 3.2vw, 1rem);
+  line-height: 1.75em;
+}
 
 ul {
   font-family: 'Ubuntu Mono', monospace;
