@@ -69,30 +69,16 @@ a:hover {
   font-size: clamp(0.8rem, 2vw, 1rem);
 }
 
-.main {
-  box-sizing: border-box;
-  display: block;
-  border-radius: .5rem;
-  margin: var(--top-padding) auto;
-  max-width: min(55rem, calc(100vw - 3rem));
-}
-
 .inner {
-  width: 100%;
-  margin: 0;
+  max-width: min(55rem, calc(100vw - 3rem));
+  margin: var(--top-padding) auto;
   padding: 15px;
   background-color: var(--color-inner-bg);
   color: var(--color-heading);
-  border-radius: 10px;
-  box-sizing: border-box;
+  border-radius: 0.5em;
   border: solid var(--color-shadow);
   border-width: 0 3px 3px;
   line-height: 1.75em;
-  position: relative;
-  z-index: 6;
-  height: auto;
-  overflow: hidden;
-  background-origin: border-box;
 }
 
 .content p {
