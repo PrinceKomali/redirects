@@ -47,7 +47,7 @@
         window.onload = _ => {
             for(i of Object.keys(links)) {
                 document.querySelector(".links").innerHTML += `
-                <li><a href='https://koma.li/${i}'>koma.li<span class="green">/${i}</span></a><br class="no_break">${'&nbsp'.repeat(6-i.length)}->&nbsp;&nbsp;<a href="${links[i]}">${links[i].split("://")[1]}</a><br class="no_break"><br></li>`
+                <li><a href='https://koma.li/${i}'>koma.li<span class="green">/${i}</span></a>${'&nbsp'.repeat(6-i.length)}->&nbsp;&nbsp;<a href="${links[i]}">${links[i].split("://")[1]}</a></li>`
             }
         }
     </script>
