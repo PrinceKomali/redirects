@@ -43,6 +43,10 @@ a:hover {
   animation: flash 2s linear infinite;
 }
 
+a:focus-visible {
+  font-weight: bold;
+}
+
 .green {
   color: var(--color-green);
   text-decoration: underline;
@@ -63,6 +67,26 @@ a:hover {
   float: right;
   margin: 0.6em;
   font-size: clamp(0.8rem, 2vw, 1rem);
+  text-decoration: none;
+  position: relative;
+}
+
+.plug::after {
+  content: "";
+  position: absolute;
+  height: 0.15em;
+  bottom: -0.05em;
+  right: 0;
+  width: 0;
+  background-color: var(--color-blue);
+  transition: width 250ms ease-in-out;
+}
+
+.plug:hover::after,
+.plug:focus-visible::after {
+  left: 0;
+  width: 100%;
+  transition: width 250ms ease-in-out;
 }
 
 .content p {
